@@ -6,6 +6,8 @@ import postcss from 'rollup-plugin-postcss'
 import babel from '@rollup/plugin-babel'
 import alias from '@rollup/plugin-alias'
 import vue from 'rollup-plugin-vue'
+import ElementPlus from 'unplugin-element-plus'
+console.log('ElementPlus: ', ElementPlus.vite)
 
 /**
  * Rollup Configuration
@@ -39,6 +41,7 @@ export default defineConfig([
         check: false
       }),
       vue(),
+      ElementPlus.vite(),
       postcss(),
       babel({
         babelHelpers: 'bundled',
@@ -46,7 +49,8 @@ export default defineConfig([
       })
     ],
     external: [
-      /^vue(\/.+|$)/
+      /^vue(\/.+|$)/,
+      'element-plus'
     ]
   }
 ])

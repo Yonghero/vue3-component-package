@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import RollupComponent from '../../dist/index.vue'
+import RollupComponent from '../../dist/index'
 </script>
 
 <template>
